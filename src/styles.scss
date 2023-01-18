@@ -1,0 +1,18 @@
+$background-color: #fe357b !important;
+$background-color-secondary: #fee2ef !important;
+$font-color: #fff !important;
+
+body {
+  opacity: 0.95;
+  background-color: $background-color-secondary;
+}
+
+.p-card {
+  background-color: $background-color;
+  color: $font-color;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
