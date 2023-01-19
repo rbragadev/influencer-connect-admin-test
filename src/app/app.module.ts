@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AuthGuardService } from './resources/services/auth-guard.service';
 import { PermissionGuardService } from './resources/services/permission-guard.service';
+import { PartnersService } from './resources/services/partners.service';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
@@ -28,7 +29,7 @@ import { PermissionGuardService } from './resources/services/permission-guard.se
     SharedModule,
     DashboardModule,
   ],
-  providers: [AuthGuardService, PermissionGuardService],
+  providers: [AuthGuardService, PermissionGuardService, PartnersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

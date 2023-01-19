@@ -5,7 +5,8 @@ import { RequestLogin } from '../models/RequestLogin';
 import { ResponseLogin } from '../models/ResponseLogin';
 import { AuthService } from './auth.service';
 
-const host: string = 'https://gateway-api-stage.b4a.com.br/';
+//const host: string = 'https://gateway-api-stage.b4a.com.br/';
+const host: string = 'http://localhost:3000/';
 
 @Injectable({
   providedIn: 'root',
