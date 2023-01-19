@@ -12,9 +12,12 @@ import { ButtonModule } from 'primeng/button';
 
 import { LoginComponent } from './views/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { PartnersComponent } from './views/partners/partners.component';
+import { AuthGuardService } from './resources/services/auth-guard.service';
+import { PermissionGuardService } from './resources/services/permission-guard.service';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, PartnersComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -25,7 +28,7 @@ import { FormsModule } from '@angular/forms';
     InputTextModule,
     ButtonModule,
   ],
-  providers: [],
+  providers: [AuthGuardService, PermissionGuardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
