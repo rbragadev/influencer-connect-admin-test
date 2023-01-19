@@ -6,27 +6,27 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CardModule } from 'primeng/card';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
+import { PrimeNgModule } from './shared/prime-ng.module';
+import { SharedModule } from './shared/shared.module';
+import { DashboardModule } from './views/dashboard/dashboard.module';
 
 import { LoginComponent } from './views/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { PartnersComponent } from './views/partners/partners.component';
+
 import { AuthGuardService } from './resources/services/auth-guard.service';
 import { PermissionGuardService } from './resources/services/permission-guard.service';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, PartnersComponent],
+  declarations: [AppComponent, LoginComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    CardModule,
-    InputTextModule,
-    ButtonModule,
+    PrimeNgModule,
+    SharedModule,
+    DashboardModule,
   ],
   providers: [AuthGuardService, PermissionGuardService],
   bootstrap: [AppComponent],

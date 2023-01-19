@@ -7,9 +7,9 @@ import { LoginComponent } from './views/login/login.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
-    path: 'dashboard',
+    path: 'dashboard' /*
     canActivate: [AuthGuardService],
-    canActivateChild: [PermissionGuardService],
+    canActivateChild: [PermissionGuardService],*/,
     loadChildren: () =>
       import('./views/dashboard/dashboard.module').then(
         (m) => m.DashboardModule

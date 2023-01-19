@@ -12,7 +12,7 @@ const routes: Routes = [
       {
         path: 'partners',
         component: PartnersComponent,
-        canActivate: [AuthGuardService],
+        /*canActivate: [AuthGuardService],*/
       },
     ],
   },
