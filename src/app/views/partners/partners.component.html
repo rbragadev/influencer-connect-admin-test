@@ -1,8 +1,9 @@
-<p>partners works!</p>
 <app-partner-detail></app-partner-detail>
-<div>{{ partners }}</div>
+<div>{{ partner_id }}</div>
 <div *ngFor="let item of partners">
-  <span> Partner: {{ item }}</span>
+  <li>
+    <span> Partner: {{ partner_id }}</span>
+  </li>
 </div>
 
 <button (click)="getAllPartners()">GET</button>

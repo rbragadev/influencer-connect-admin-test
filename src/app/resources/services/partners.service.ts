@@ -32,6 +32,16 @@ export class PartnersService {
     );
   }
 
+  //Example to Test*****************************
+  async getPartners() {
+    const req = await this.httpClient.get<any>(
+      `${this.apiUrl}/influencer-connect/partner`
+    );
+    const listPartners = req.forEach;
+    console.log(listPartners);
+    console.log(req);
+  }
+
   /*getAllPartners() {
     this.httpClient
       .get<ResponsePartner[]>(`${this.apiUrl}/influencer-connect/partner`)
