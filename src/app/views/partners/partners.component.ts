@@ -45,7 +45,11 @@ export class PartnersComponent implements OnInit {
     this.partnersService.getAllPartners().subscribe((data) => {
       let partners = data;
       this.partners = data;
-      let res = partners.map((c) => c.partner_id);
+
+      let res = partners.forEach((c) => {
+        c['partner_id'];
+      });
+
       this.partner_id = res;
       console.log(partners);
       console.log(res);
