@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Partner } from 'src/app/resources/models/Partner.model';
 import { ResponsePartner } from 'src/app/resources/models/ResponsePartner.model';
 import { PartnersService } from 'src/app/resources/services/partners.service';
 
@@ -8,14 +10,31 @@ import { PartnersService } from 'src/app/resources/services/partners.service';
   styleUrls: ['./partners.component.scss'],
 })
 export class PartnersComponent implements OnInit {
-  partners: ResponsePartner[] = [];
+  partners: any = [];
   apiUrl: string = 'http://localhost:3000';
 
-  constructor(public partnersService: PartnersService) {}
+  constructor(
+    public partnersService: PartnersService,
+    public http: HttpClient
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAllPartners();
+  }
 
   getAllPartners() {
-    this.partnersService.getAllPartners();
+    this.partnersService.getAllPartners().subscribe((data) => {
+      this.partners = data;
+      console.log(this.partners);
+    });
   }
+  /*getAllPartners() {
+    return this.partnersService
+      .getAllPartners()
+      .subscribe((data: ResponsePartner[]) => {
+        this.partners = data;
+      });
+
+    console.log(this.partners);
+  }*/
 }

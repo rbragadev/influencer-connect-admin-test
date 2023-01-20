@@ -1,5 +1,5 @@
-export class ResponsePartner {
-  partner_id?: number = 0;
+export class Partner {
+  partner_id: number = 0;
   partner_level_id?: number = 0;
   creation_date?: string | Date = '';
   partner_first_name?: string = '';
